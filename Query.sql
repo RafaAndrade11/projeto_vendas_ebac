@@ -85,3 +85,8 @@ SELECT PQ.ID, PQ.QUANTIDADE, PQ.VALOR_TOTAL,
 P.ID AS ID_PRODUTO, P.CODIGO, P.NOME, P.DESCRICAO, P.VALOR
 FROM TB_PRODUTO_QUANTIDADE PQ
 INNER JOIN TB_PRODUTO P ON P.ID = PQ.ID_PRODUTO_FK;
+
+select * from tb_cliente;
+
+alter table tb_cliente
+add column idade integer not null constraint check_idade check (idade >0 and idade <120);
