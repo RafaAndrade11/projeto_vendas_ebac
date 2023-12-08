@@ -34,6 +34,7 @@ public class ProdutoServiceTest {
         produto.setDescricao("Produto 1");
         produto.setNome("Produto 1");
         produto.setValor(BigDecimal.TEN);
+        produto.setValidade("12-12-2024");
     }
 
     @Test

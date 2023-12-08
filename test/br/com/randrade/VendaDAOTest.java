@@ -287,6 +287,7 @@ public class VendaDAOTest {
         produto.setDescricao("Produto 1");
         produto.setNome("Produto 1");
         produto.setValor(valor);
+        produto.setValidade("12-12-2023");
         produtoDao.cadastrar(produto);
         return produto;
     }

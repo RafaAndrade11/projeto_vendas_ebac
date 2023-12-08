@@ -2,6 +2,7 @@
 package br.com.randrade.domain;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 import anotacao.ColunaTabela;
 import anotacao.Tabela;
@@ -27,6 +28,11 @@ public class Produto implements Persistente {
 
     @ColunaTabela(dbName = "valor", setJavaName = "setValor")
     private BigDecimal valor;
+
+    @ColunaTabela(dbName = "validade", setJavaName = "setValidade")
+    private String validade;
+
+
 
     public String getCodigo() {
         return codigo;
@@ -68,4 +74,11 @@ public class Produto implements Persistente {
         this.id = id;
     }
 
+    public String getValidade() {
+        return validade;
+    }
+
+    public void setValidade(String validade) {
+        this.validade = validade;
+    }
 }
